@@ -28,6 +28,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F2414F1E2D43FDE800CEC8E1 /* Shared TableView Cells */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Shared TableView Cells";
+			sourceTree = "<group>";
+		};
 		F2CAB9A12D43B6E60007C26D /* Cell Controller */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Cell Controller";
@@ -79,6 +84,7 @@
 		F2CAB9942D43B1850007C26D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F2414F1E2D43FDE800CEC8E1 /* Shared TableView Cells */,
 				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);
 			path = Modules;
@@ -131,6 +137,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				F2414F142D43C6C400CEC8E1 /* Model */,
+				F2414F1E2D43FDE800CEC8E1 /* Shared TableView Cells */,
 				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
 				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);

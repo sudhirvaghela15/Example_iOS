@@ -37,6 +37,18 @@ class FeedVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.contentInset = .init(top: 25, left: 0, bottom: 25, right: 0)
+		
+		tableView
+			.register(
+				UINib(nibName: "CardCell", bundle: nil),
+				forCellReuseIdentifier: "CardCell"
+			)
+		tableView
+			.register(
+				UINib(nibName: "Card2Cell", bundle: nil),
+				forCellReuseIdentifier: "Card2Cell"
+			)
+                
 		onRefresh?()
     }
 }
@@ -44,20 +56,64 @@ class FeedVC: UIViewController {
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+		return viewModel.items.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+		return viewModel.items[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		let sectionItem = viewModel.items[indexPath.section]
+		let item = sectionItem.items[indexPath.row]
+	
+		if sectionItem.type == "section one" {
+			
+			let cell = tableView.dequeueReusableCell(
+				withIdentifier: "Card2Cell",
+				for: indexPath
+			) as! Card2Cell
+			cell.configCell(item: item)
+			return cell
+			
+		} else if sectionItem.type == "section two" {
+			
+			let cell = tableView.dequeueReusableCell(
+				withIdentifier: "CardCell",
+				for: indexPath
+			) as! CardCell
+			cell.configCell(item: item)
+			return cell
+			
+		} else if sectionItem.type == "section three" {
+			
+			let cell = UITableViewCell()
+			cell.backgroundColor = .systemPink
+			return cell
+			
+		} else if sectionItem.type == "section four" {
+			
+			let cell = tableView.dequeueReusableCell(
+				withIdentifier: "CardCell",
+				for: indexPath
+			) as! CardCell
+			cell.configCell(item: item)
+			return cell
+			
+		} else if sectionItem.type == "section five" {
+			
+			let cell = tableView.dequeueReusableCell(
+				withIdentifier: "Card2Cell",
+				for: indexPath
+			) as! Card2Cell
+			cell.configCell(item: item)
+			return cell
+		} else {
+			return UITableViewCell()
+		}
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
 }
 
 // MARK: - factory method
