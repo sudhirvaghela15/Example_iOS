@@ -23,6 +23,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		F2414F142D43C6C400CEC8E1 /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F2CAB9A12D43B6E60007C26D /* Cell Controller */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Cell Controller";
@@ -101,6 +106,7 @@
 			children = (
 				F2CAB9932D43B1850007C26D /* App */,
 				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
+				F2414F142D43C6C400CEC8E1 /* Model */,
 				F2CAB9942D43B1850007C26D /* Modules */,
 				F2CAB9962D43B1850007C26D /* Resources */,
 				F2CAB99A2D43B1850007C26D /* Supporting File's */,
@@ -124,6 +130,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				F2414F142D43C6C400CEC8E1 /* Model */,
 				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
 				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);
