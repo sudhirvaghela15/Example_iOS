@@ -22,6 +22,19 @@
 		F2CAB9982D43B1850007C26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F2CAB9A12D43B6E60007C26D /* Cell Controller */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Cell Controller";
+			sourceTree = "<group>";
+		};
+		F2CAB9A62D43BCFC0007C26D /* Feed */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Feed;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		F2CAB9722D43AE700007C26D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -61,6 +74,7 @@
 		F2CAB9942D43B1850007C26D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -86,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F2CAB9932D43B1850007C26D /* App */,
+				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
 				F2CAB9942D43B1850007C26D /* Modules */,
 				F2CAB9962D43B1850007C26D /* Resources */,
 				F2CAB99A2D43B1850007C26D /* Supporting File's */,
@@ -107,6 +122,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
+				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);
 			name = SOLID_principles_Example_iOS;
 			packageProductDependencies = (
