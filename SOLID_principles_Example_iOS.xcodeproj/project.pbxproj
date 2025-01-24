@@ -6,30 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F2CAB99C2D43B1850007C26D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CAB9952D43B1850007C26D /* Assets.xcassets */; };
+		F2CAB99E2D43B1850007C26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CAB9992D43B1850007C26D /* LaunchScreen.storyboard */; };
+		F2CAB99F2D43B1850007C26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAB9912D43B1850007C26D /* AppDelegate.swift */; };
+		F2CAB9A02D43B1850007C26D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAB9922D43B1850007C26D /* SceneDelegate.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F2CAB9752D43AE700007C26D /* SOLID_principles_Example_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOLID_principles_Example_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CAB9912D43B1850007C26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2CAB9922D43B1850007C26D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F2CAB9952D43B1850007C26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2CAB9972D43B1850007C26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2CAB9982D43B1850007C26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F2CAB9872D43AE720007C26D /* Exceptions for "SOLID_principles_Example_iOS" folder in "SOLID_principles_Example_iOS" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Supporting File's/Info.plist",
-			);
-			target = F2CAB9742D43AE700007C26D /* SOLID_principles_Example_iOS */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F2CAB9772D43AE700007C26D /* SOLID_principles_Example_iOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F2CAB9872D43AE720007C26D /* Exceptions for "SOLID_principles_Example_iOS" folder in "SOLID_principles_Example_iOS" target */,
-			);
-			path = SOLID_principles_Example_iOS;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F2CAB9722D43AE700007C26D /* Frameworks */ = {
@@ -45,7 +36,7 @@
 		F2CAB96C2D43AE6F0007C26D = {
 			isa = PBXGroup;
 			children = (
-				F2CAB9772D43AE700007C26D /* SOLID_principles_Example_iOS */,
+				F2CAB99B2D43B1850007C26D /* SOLID_principles_Example_iOS */,
 				F2CAB9762D43AE700007C26D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +47,50 @@
 				F2CAB9752D43AE700007C26D /* SOLID_principles_Example_iOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F2CAB9932D43B1850007C26D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F2CAB9912D43B1850007C26D /* AppDelegate.swift */,
+				F2CAB9922D43B1850007C26D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F2CAB9942D43B1850007C26D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F2CAB9962D43B1850007C26D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2CAB9952D43B1850007C26D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2CAB99A2D43B1850007C26D /* Supporting File's */ = {
+			isa = PBXGroup;
+			children = (
+				F2CAB9972D43B1850007C26D /* Info.plist */,
+				F2CAB9992D43B1850007C26D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting File's";
+			sourceTree = "<group>";
+		};
+		F2CAB99B2D43B1850007C26D /* SOLID_principles_Example_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F2CAB9932D43B1850007C26D /* App */,
+				F2CAB9942D43B1850007C26D /* Modules */,
+				F2CAB9962D43B1850007C26D /* Resources */,
+				F2CAB99A2D43B1850007C26D /* Supporting File's */,
+			);
+			path = SOLID_principles_Example_iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +107,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F2CAB9772D43AE700007C26D /* SOLID_principles_Example_iOS */,
 			);
 			name = SOLID_principles_Example_iOS;
 			packageProductDependencies = (
@@ -122,6 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CAB99C2D43B1850007C26D /* Assets.xcassets in Resources */,
+				F2CAB99E2D43B1850007C26D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +166,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CAB99F2D43B1850007C26D /* AppDelegate.swift in Sources */,
+				F2CAB9A02D43B1850007C26D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2CAB9992D43B1850007C26D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2CAB9982D43B1850007C26D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F2CAB9892D43AE720007C26D /* Debug */ = {
