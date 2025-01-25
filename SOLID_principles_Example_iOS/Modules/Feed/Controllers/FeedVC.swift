@@ -66,50 +66,49 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let sectionItem = viewModel.items[indexPath.section]
 		let item = sectionItem.items[indexPath.row]
-	
-		if sectionItem.type == "section one" {
-			
-			let cell = tableView.dequeueReusableCell(
-				withIdentifier: "Card2Cell",
-				for: indexPath
-			) as! Card2Cell
-			cell.configCell(item: item)
-			return cell
-			
-		} else if sectionItem.type == "section two" {
-			
-			let cell = tableView.dequeueReusableCell(
-				withIdentifier: "CardCell",
-				for: indexPath
-			) as! CardCell
-			cell.configCell(item: item)
-			return cell
-			
-		} else if sectionItem.type == "section three" {
-			
-			let cell = UITableViewCell()
-			cell.backgroundColor = .systemPink
-			return cell
-			
-		} else if sectionItem.type == "section four" {
-			
-			let cell = tableView.dequeueReusableCell(
-				withIdentifier: "CardCell",
-				for: indexPath
-			) as! CardCell
-			cell.configCell(item: item)
-			return cell
-			
-		} else if sectionItem.type == "section five" {
-			
-			let cell = tableView.dequeueReusableCell(
-				withIdentifier: "Card2Cell",
-				for: indexPath
-			) as! Card2Cell
-			cell.configCell(item: item)
-			return cell
-		} else {
-			return UITableViewCell()
+		
+		switch sectionItem.type {
+			case "section one":
+				let cell = tableView.dequeueReusableCell(
+					withIdentifier: "Card2Cell",
+					for: indexPath
+				) as! Card2Cell
+				cell.configCell(item: item)
+				return cell
+				
+			case "section two":
+				let cell = tableView.dequeueReusableCell(
+					withIdentifier: "CardCell",
+					for: indexPath
+				) as! CardCell
+				cell.configCell(item: item)
+				return cell
+				
+			case "section three":
+				let cell = tableView.dequeueReusableCell(
+					withIdentifier: "Card2Cell",
+					for: indexPath
+				) as! Card2Cell
+				cell.configCell(item: item)
+				return cell
+				
+			case "section four":
+				let cell = tableView.dequeueReusableCell(
+					withIdentifier: "CardCell",
+					for: indexPath
+				) as! CardCell
+				cell.configCell(item: item)
+				return cell
+				
+			case "section five":
+				let cell = tableView.dequeueReusableCell(
+					withIdentifier: "Card2Cell",
+					for: indexPath
+				) as! Card2Cell
+				cell.configCell(item: item)
+				return cell
+				
+			default: return UITableViewCell()
 		}
     }
     
