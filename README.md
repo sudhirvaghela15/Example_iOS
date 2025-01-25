@@ -113,7 +113,7 @@ final class CardCellController: CellController {
 ```
 
 <img width="671" alt="image" src="https://github.com/user-attachments/assets/f56561dd-eeb8-4552-ac5c-1f8e1f88e858" />
-in line 42 we check for the cell type, for every cell we register the specific cell type and append it to the cellControllers list.
+<p>in line 42 we check for the cell type, for every cell we register the specific cell type and append it to the cellControllers list.</p>
 
 <h4>4- Finally look at UITableViewDataSource.</h4>
 <img width="752" alt="image" src="https://github.com/user-attachments/assets/d81f40fa-dfc0-4f65-bf32-9997da04ef5d" />
