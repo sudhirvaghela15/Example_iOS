@@ -68,7 +68,7 @@ final class CardCellController: CellController {
 }
 ```
 
-<h4>3- Create a list of cellControllers with the type CellController, and a list of sections with the type.</h4>
+<h4>3- Create a list of cellControllers with the type CellController.</h4>
 
 ```
 	func loadMockData() {
