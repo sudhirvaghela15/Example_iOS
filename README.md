@@ -42,7 +42,34 @@ allowing for customization and flexibility in handling different types of cell d
 include a static register method in each cell controller to register the corresponding cell
 type with the table view, typically using a custom cell class or nib</p>
 
-<img width="770" alt="image" src="https://github.com/user-attachments/assets/7371ece7-e48a-4a1b-bf9a-eae14c82f5d0" />
+```
+final class CardCellController: CellController {
+	
+	var model: CardModel
+	
+	init(model: CardModel) {
+		self.model = model
+	}
+	
+	func register(_ tableView: UITableView) {
+		tableView.register(
+			UINib(nibName: "CardCell", bundle: nil),
+			   forCellReuseIdentifier: "CardCell"
+		   )
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
+		cell.didToggleStatus = { [weak self] in
+			self?.model.active.toggle()
+			tableView.reloadRows(at: [indexPath], with: .fade)
+		}
+		cell.configCell(item: model)
+		cell.backgroundColor = .blue
+		return cell
+	}
+}
+```
 
 <h4>Benefits of These Approaches</h4>
 1. Scalability: Adding new sections or cell types is as simple as adding new models or conforming types.
