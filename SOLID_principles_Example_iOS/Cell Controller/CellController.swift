@@ -8,6 +8,8 @@
 import UIKit
 
 protocol CellController {
+	
+	func register(_ tableView: UITableView)
   
 	func configure(_ tableView: UITableView)
 	

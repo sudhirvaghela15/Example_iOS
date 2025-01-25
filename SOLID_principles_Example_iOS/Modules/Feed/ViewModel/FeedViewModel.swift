@@ -17,6 +17,7 @@ final class FeedViewModel: FeedViewModelProtocol {
 		dummyHomeFolderOne,
 		dummyHomeFolderOneTow,
 		dummyHomeFolderTwo,
+		dummyHomeFolderThree,
 		dummyHomeFolderFive
 	]
 
