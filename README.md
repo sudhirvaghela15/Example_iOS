@@ -18,14 +18,11 @@
 
 ```
 protocol CellController {
-	associatedtype T
-	var model: T { get }
-	
 	func register(_ tableView: UITableView)
 	
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }
 
 extension CellController {
@@ -48,7 +45,7 @@ final class CardCellController: CellController {
 	var model: CardModel
 	
 	init(model: CardModel) {
-		self.model = model
+	   self.model = model
 	}
 	
 	func register(_ tableView: UITableView) {
@@ -70,6 +67,57 @@ final class CardCellController: CellController {
 	}
 }
 ```
+
+<h4>3- Create a list of cellControllers with the type CellController, and a list of sections with the type.</h4>
+
+```
+	func loadMockData() {
+		let mockdata = [dummyHomeFolderOne, dummyHomeFolderTwo, dummyHomeFolderThree, dummyHomeFolderFour, dummyHomeFolderFive]
+		cellControllers = []
+		mockdata.forEach { folder in
+			switch folder.type {
+				case "section one":
+					cellControllers
+						.append(
+							contentsOf: folder.items
+								.compactMap({ CardTwoCellController(model: $0)})
+						)
+				case "section two":
+					cellControllers
+						.append(
+							contentsOf: folder.items
+								.compactMap({ CardCellController(model: $0)})
+						)
+				case "section three":
+					cellControllers
+						.append(
+							contentsOf: folder.items
+								.compactMap({ CardCellController(model: $0)})
+						)
+				case "section four":
+					cellControllers
+						.append(
+							contentsOf: folder.items
+								.compactMap({ CardTwoCellController(model: $0)})
+						)
+				case "section five":
+					cellControllers
+						.append(
+							contentsOf: folder.items
+								.compactMap({ CardCellController(model: $0)})
+						)
+				default: break
+			}
+		}
+	}
+```
+
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/f56561dd-eeb8-4552-ac5c-1f8e1f88e858" />
+in line 42 we check for the cell type, for every cell we register the specific cell type and append it to the cellControllers list.
+
+<h4>4- Finally look at UITableViewDataSource.</h4>
+<img width="752" alt="image" src="https://github.com/user-attachments/assets/d81f40fa-dfc0-4f65-bf32-9997da04ef5d" />
+
 
 <h4>Benefits of These Approaches</h4>
 1. Scalability: Adding new sections or cell types is as simple as adding new models or conforming types.
