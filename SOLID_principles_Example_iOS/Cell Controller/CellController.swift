@@ -8,9 +8,7 @@
 import UIKit
 
 protocol CellController {
-	associatedtype T
-	var model: T { get }
-	
+
 	func register(_ tableView: UITableView)
 	
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class Card2CellController: CellController {
+final class CardTwoCellController: CellController {
 	
 	var model: CardModel
 	
@@ -24,7 +24,6 @@ final class Card2CellController: CellController {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Card2Cell", for: indexPath) as! Card2Cell
-	
 		cell.configCell(item: model)
 		cell.backgroundColor = .green
 		return cell

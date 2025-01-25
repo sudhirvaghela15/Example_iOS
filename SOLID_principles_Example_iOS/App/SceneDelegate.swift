@@ -17,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		self.window = UIWindow(windowScene: windowScene)
 		
 		let feedViewModel = FeedViewModel()
-		window?.rootViewController = FeedVC.get(viewModel: feedViewModel, onRefresh: { })
+		window?.rootViewController = FeedVC
+			.get(viewModel: feedViewModel)
 		window?.makeKeyAndVisible()
 		
 	}
