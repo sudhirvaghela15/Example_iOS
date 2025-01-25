@@ -4,7 +4,7 @@
 
 <p>Consider a common scenario in app development where you have a list view with sections and multiple types of cells. Each cell has its own unique layout and behavior. Traditionally, you may have used a switch case statement and if else to handle the different cell types, leading to a massive and unwieldy block of code. But what happens when you need to add a new type of cell? It quickly becomes a headache, involving extensive modifications to the existing code and violating the SOLID principle of open-closed design.</p>
 
-![image](https://github.com/user-attachments/assets/fd3cc8b8-5ba5-4575-b446-3c9f3ede7b50)
+<img width="647" alt="image" src="https://github.com/user-attachments/assets/db9626ef-f4a3-4680-9e93-1cb8385eb40c" />
 
 <p>In the last screenshots, let’s say we want to introduce a new type of cell with a 
   completely different layout and functionality. With the switch case approach,
