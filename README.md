@@ -6,7 +6,7 @@
 
 <img width="647" alt="image" src="https://github.com/user-attachments/assets/db9626ef-f4a3-4680-9e93-1cb8385eb40c" />
 
-<p>In the last screenshots, let’s say we want to introduce a new type of cell with a 
+<p>In the abov screenshots, let’s say we want to introduce a new type of cell with a 
   completely different layout and functionality. With the switch case approach,
   we would need to modify the existing code, add a new case or else if, 
   and handle the specific logic for the new cell type. This not only introduces overhead 
@@ -16,14 +16,33 @@
 <h4>Solution:</h4>
 <p>1- Create a protocol CellController, Using CellController promotes code reusability and maintainability.</p>
 
-<p>2- Create a separate struct for each cell type in the table view.
-Each struct should conform to the CellController protocol,
+```
+protocol CellController {
+	associatedtype T
+	var model: T { get }
+	
+	func register(_ tableView: UITableView)
+	
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+}
+
+extension CellController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
+}
+
+```
+
+<p>2- Create a separate cell controller class for each cell type in the table view.
+Each cell controller class should conform to the CellController protocol,
 which defines the required methods for configuring the cell,
-Each cell struct should have its own associated data type,
+Each cell controller should have its own associated data type,
 allowing for customization and flexibility in handling different types of cell data, 
-include a static register method in each cell struct to register the corresponding cell
+include a static register method in each cell controller to register the corresponding cell
 type with the table view, typically using a custom cell class or nib</p>
 
+<img width="770" alt="image" src="https://github.com/user-attachments/assets/7371ece7-e48a-4a1b-bf9a-eae14c82f5d0" />
 
 <h4>Benefits of These Approaches</h4>
 1. Scalability: Adding new sections or cell types is as simple as adding new models or conforming types.
