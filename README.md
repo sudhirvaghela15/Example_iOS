@@ -70,50 +70,10 @@ final class CardCellController: CellController {
 
 <h4>3- Create a list of cellControllers with the type CellController.</h4>
 
-```
-	func loadMockData() {
-		let mockdata = [dummyHomeFolderOne, dummyHomeFolderTwo, dummyHomeFolderThree, dummyHomeFolderFour, dummyHomeFolderFive]
-		cellControllers = []
-		mockdata.forEach { folder in
-			switch folder.type {
-				case "section one":
-					cellControllers
-						.append(
-							contentsOf: folder.items
-								.compactMap({ CardTwoCellController(model: $0)})
-						)
-				case "section two":
-					cellControllers
-						.append(
-							contentsOf: folder.items
-								.compactMap({ CardCellController(model: $0)})
-						)
-				case "section three":
-					cellControllers
-						.append(
-							contentsOf: folder.items
-								.compactMap({ CardCellController(model: $0)})
-						)
-				case "section four":
-					cellControllers
-						.append(
-							contentsOf: folder.items
-								.compactMap({ CardTwoCellController(model: $0)})
-						)
-				case "section five":
-					cellControllers
-						.append(
-							contentsOf: folder.items
-								.compactMap({ CardCellController(model: $0)})
-						)
-				default: break
-			}
-		}
-	}
-```
+<img width="797" alt="image" src="https://github.com/user-attachments/assets/b209bf48-211e-4185-941d-c427270eff72" />
 
+<p>in line 42 every cell we register the specific cell type </p>
 <img width="671" alt="image" src="https://github.com/user-attachments/assets/f56561dd-eeb8-4552-ac5c-1f8e1f88e858" />
-<p>in line 42 we check for the cell type, for every cell we register the specific cell type and append it to the cellControllers list.</p>
 
 <h4>4- Finally look at UITableViewDataSource.</h4>
 <img width="752" alt="image" src="https://github.com/user-attachments/assets/d81f40fa-dfc0-4f65-bf32-9997da04ef5d" />
