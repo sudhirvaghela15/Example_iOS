@@ -11,31 +11,25 @@
 		F2CAB99E2D43B1850007C26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CAB9992D43B1850007C26D /* LaunchScreen.storyboard */; };
 		F2CAB99F2D43B1850007C26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAB9912D43B1850007C26D /* AppDelegate.swift */; };
 		F2CAB9A02D43B1850007C26D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAB9922D43B1850007C26D /* SceneDelegate.swift */; };
+		F2FD07212D4AABFA001F0C28 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD071F2D4AABFA001F0C28 /* CellController.swift */; };
+		F2FD07242D4AABFD001F0C28 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD07222D4AABFD001F0C28 /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F2CAB9752D43AE700007C26D /* SOLID_principles_Example_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOLID_principles_Example_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CAB9752D43AE700007C26D /* Example_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CAB9912D43B1850007C26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2CAB9922D43B1850007C26D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F2CAB9952D43B1850007C26D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2CAB9972D43B1850007C26D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2CAB9982D43B1850007C26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2FD071F2D4AABFA001F0C28 /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		F2FD07222D4AABFD001F0C28 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F2414F142D43C6C400CEC8E1 /* Model */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Model;
-			sourceTree = "<group>";
-		};
 		F2414F1E2D43FDE800CEC8E1 /* Shared TableView Cells */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Shared TableView Cells";
-			sourceTree = "<group>";
-		};
-		F2CAB9A12D43B6E60007C26D /* Cell Controller */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Cell Controller";
 			sourceTree = "<group>";
 		};
 		F2CAB9A62D43BCFC0007C26D /* Feed */ = {
@@ -59,7 +53,7 @@
 		F2CAB96C2D43AE6F0007C26D = {
 			isa = PBXGroup;
 			children = (
-				F2CAB99B2D43B1850007C26D /* SOLID_principles_Example_iOS */,
+				F2CAB99B2D43B1850007C26D /* Example_iOS */,
 				F2CAB9762D43AE700007C26D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +61,7 @@
 		F2CAB9762D43AE700007C26D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2CAB9752D43AE700007C26D /* SOLID_principles_Example_iOS.app */,
+				F2CAB9752D43AE700007C26D /* Example_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,25 +101,41 @@
 			path = "Supporting File's";
 			sourceTree = "<group>";
 		};
-		F2CAB99B2D43B1850007C26D /* SOLID_principles_Example_iOS */ = {
+		F2CAB99B2D43B1850007C26D /* Example_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				F2CAB9932D43B1850007C26D /* App */,
-				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
-				F2414F142D43C6C400CEC8E1 /* Model */,
+				F2FD07202D4AABFA001F0C28 /* Cell Controller */,
+				F2FD07232D4AABFD001F0C28 /* Model */,
 				F2CAB9942D43B1850007C26D /* Modules */,
 				F2CAB9962D43B1850007C26D /* Resources */,
 				F2CAB99A2D43B1850007C26D /* Supporting File's */,
 			);
-			path = SOLID_principles_Example_iOS;
+			path = Example_iOS;
+			sourceTree = "<group>";
+		};
+		F2FD07202D4AABFA001F0C28 /* Cell Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2FD071F2D4AABFA001F0C28 /* CellController.swift */,
+			);
+			path = "Cell Controller";
+			sourceTree = "<group>";
+		};
+		F2FD07232D4AABFD001F0C28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2FD07222D4AABFD001F0C28 /* CardModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F2CAB9742D43AE700007C26D /* SOLID_principles_Example_iOS */ = {
+		F2CAB9742D43AE700007C26D /* Example_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2CAB9882D43AE720007C26D /* Build configuration list for PBXNativeTarget "SOLID_principles_Example_iOS" */;
+			buildConfigurationList = F2CAB9882D43AE720007C26D /* Build configuration list for PBXNativeTarget "Example_iOS" */;
 			buildPhases = (
 				F2CAB9712D43AE700007C26D /* Sources */,
 				F2CAB9722D43AE700007C26D /* Frameworks */,
@@ -136,16 +146,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F2414F142D43C6C400CEC8E1 /* Model */,
 				F2414F1E2D43FDE800CEC8E1 /* Shared TableView Cells */,
-				F2CAB9A12D43B6E60007C26D /* Cell Controller */,
 				F2CAB9A62D43BCFC0007C26D /* Feed */,
 			);
-			name = SOLID_principles_Example_iOS;
+			name = Example_iOS;
 			packageProductDependencies = (
 			);
 			productName = SOLID_principles_Example_iOS;
-			productReference = F2CAB9752D43AE700007C26D /* SOLID_principles_Example_iOS.app */;
+			productReference = F2CAB9752D43AE700007C26D /* Example_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F2CAB9702D43AE700007C26D /* Build configuration list for PBXProject "SOLID_principles_Example_iOS" */;
+			buildConfigurationList = F2CAB9702D43AE700007C26D /* Build configuration list for PBXProject "Example_iOS" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -177,7 +185,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2CAB9742D43AE700007C26D /* SOLID_principles_Example_iOS */,
+				F2CAB9742D43AE700007C26D /* Example_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +209,8 @@
 			files = (
 				F2CAB99F2D43B1850007C26D /* AppDelegate.swift in Sources */,
 				F2CAB9A02D43B1850007C26D /* SceneDelegate.swift in Sources */,
+				F2FD07212D4AABFA001F0C28 /* CellController.swift in Sources */,
+				F2FD07242D4AABFD001F0C28 /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +237,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7RC8RLSUKW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOLID_principles_Example_iOS/Supporting File's/Info.plist";
+				INFOPLIST_FILE = "Example_iOS/Supporting File's/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -237,7 +247,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sudhir.SOLID-principles-Example-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sudhir.example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -254,7 +264,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7RC8RLSUKW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOLID_principles_Example_iOS/Supporting File's/Info.plist";
+				INFOPLIST_FILE = "Example_iOS/Supporting File's/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -264,7 +274,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sudhir.SOLID-principles-Example-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sudhir.example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -394,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F2CAB9702D43AE700007C26D /* Build configuration list for PBXProject "SOLID_principles_Example_iOS" */ = {
+		F2CAB9702D43AE700007C26D /* Build configuration list for PBXProject "Example_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2CAB98B2D43AE720007C26D /* Debug */,
@@ -403,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2CAB9882D43AE720007C26D /* Build configuration list for PBXNativeTarget "SOLID_principles_Example_iOS" */ = {
+		F2CAB9882D43AE720007C26D /* Build configuration list for PBXNativeTarget "Example_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2CAB9892D43AE720007C26D /* Debug */,
