@@ -16,5 +16,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build 
-        run: xcodebuild -sdk iphonesimulator -configuration Debug -project "SwiftUICatelog.xcodeproj" -scheme "SwiftUICatelog" -derivedDataPath $(pwd)
+        run: xcodebuild -sdk iphonesimulator -configuration Debug -project "Example_iOS.xcodeproj" -scheme "Example_iOS" -derivedDataPath $(pwd)
         
